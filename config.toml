@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "https://urbanmosquito.github.io"
-title = "Urban Spaces and Mosquitoes"
+title = "Urban Spaces and Mosquitoes on a Changing Planet"
 theme = "meghna"
 themesDir = "themes"
 # post pagination
@@ -85,10 +85,10 @@ weight = 7
 
 ############################# Default Parameters ##########################
 [params]
-logo = "images/logo.png"
+logo = "images/hero-image.jpeg"
 # Meta data
-description = "Responsive Multipurpose Parallax Hugo Template"
-author = "Themefisher"
+description = "Urban Spaces and Mosquitoes on a Changing Planet. A conference at UPF Barcelona on 23-25 March 2023."
+author = "Urban Spaces and Mosquitoes on a Changing Planet"
 # Google Analytics
 google_analytics_id = "" # Your ID
 # post share
