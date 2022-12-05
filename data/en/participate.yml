@@ -1,0 +1,109 @@
+################################# Service #################################
+participate:
+  enable : true
+  title : Participate
+  content: "You can participate in several ways some of which are in the process of being rolled out over the coming weeks and months. Choose one or more of these options."
+  main_button_url: participate
+  main_button_text: "Learn More"
+  service_item :
+    # service item loop
+    - name : "[Mosquito Alert](#mosquito_alert)"
+      icon : "fas fa-people-arrows"
+      url: http://www.mosquitoalert.com
+      content : "Report mosquitoes through the Mosquito Alert app."
+      
+    # service item loop
+    - name : "[Talk to us](#talk)"
+      icon : "fas fa-comments"
+      url: participate#talk
+      content : "Talk to us about your experiences with mosquitoes."
+      
+    # service item loop
+    - name : "[Show us](#show)"
+      icon : "fas fa-walking"
+      url: participate#show
+      content : "Let us accompany you during your usual routines."
+      
+    # service item loop
+    - name : "[Share mosquitoes](#share_mosquitoes)"
+      icon : "fas fa-binoculars" # themify icon pack : https://themify.me/themify-icons
+      url: participate#share_mosquitoes
+      content : "Let us hunt mosquitoes in or around the places where you spend time."
+      
+    # service item loop
+    - name : "[Share tracks](#share_tracks)"
+      icon : "fas fa-mobile-alt"
+      url: participate#share_tracks
+      content : "Share your mobility patterns using a privacy-focused app."
+      
+    # service item loop
+    - name : "[Share DNA](#share_dna)"
+      icon : "fas fa-dna"
+      url: participate#share_dna
+      content : "Spit into a tube to see which mosquitoes have bitten you."
+
+  content_detail : "If you are at least 18 years old, you can participate in the project by reporting mosquitoes through the Mosquito Alert citizen science system, or by volunteering to be interviewed or observed, or to have us inspect your house for mosquitoes or analyze your DNA to see which mosquitoes we can find that have bitten you. To participate with Mosquito Alert, just download the app and start reporting what you find. For other forms of participation, download our information sheet and consent form below and then choose what you want to do. You can always change your mind and withdraw from an activity or add a new one."
+  main_download_button : "Download Information Sheet and Consent Form"
+  main_download_button_url: "../docs/info_consent_full_en.pdf"
+
+  service_item_detail :
+    # service item loop
+    - name : "Mosquito Alert"
+      id : mosquito_alert
+      icon : "fas fa-people-arrows"
+      image: images/participate/malert.png
+      image_webp: images/participate/malert.webp
+      content : "Start participating by downloading the Mosquito Alert app. Report mosquitoes and their breeding sites when you find them. Mark where you have been bitten. Learn about mosquitoes and more."
+      button : true
+      button_text : "Go to Mosquito Alert now"
+      button_url: http://www.mosquitoalert.com
+      
+    # service item loop
+    - name : "Talk to us"
+      id: talk
+      icon : "fas fa-comments"
+      image: images/participate/talk_to_us.jpg
+      image_webp: images/participate/talk_to_us.webp
+      content : "Talk to us about your experiences with mosquitoes. We are recruiting volunteers for interviews, which could be in person or by phone or video conference. We can keep the interview very short if you are pressed for time, or make it longer if you want to talk more. We are particularly interested in learning where and when you tend to be bitten by mosquitoes and how often. If you want to participate in just a very short interview, download the information sheet below and come talk to us."
+      button : true
+      button_text : "Download the information sheet for short interviews"
+      button_url: ../docs/info_short_interviews_en.pdf
+
+      
+    # service item loop
+    - name : "Show us"
+      id: show
+      icon : "fas fa-walking"
+      image: images/participate/walking.jpg
+      image_webp: images/participate/walking.webp
+      content : "Let us accompany you during your usual routines to observe mosquito interactions. We will soon be recruiting volunteers."
+      
+    # service item loop
+    - name : Share mosquitoes
+      id: share_mosquitoes
+      icon : "fas fa-binoculars" # themify icon pack : https://themify.me/themify-icons
+      image: images/participate/mosquits.jpg
+      image_webp: images/participate/mosquits.webp
+      content : "Let us hunt mosquitoes in or around your home, garden or other places where you spend time. We will soon be recruiting volunteers."
+      
+    # service item loop
+    - name : Share tracks
+      id: share_tracks
+      icon : "fas fa-mobile-alt"
+      image: images/participate/tracks.png
+      image_webp: images/participate/tracks.webp
+      content : "Share your mobility patterns using a privacy-focused app. We will soon be releasing a new version of Space Mapper, which uses end-to-end encryption and lets you control what you share."
+      button: true
+      button_url: https://github.com/ActivitySpaceProject/space_mapper
+      button_text: "Learn more about Space Mapper"
+      
+    # service item loop
+    - name : Share DNA
+      id: share_dna
+      icon : "fas fa-dna"
+      image: images/participate/dna.png
+      image_webp: images/participate/dna.webp
+      content : "Spit into a tube so that we can analyze your DNA and see which mosquitoes have bitten you. We have been recruiting volunteers for this at special outdoor events, but will are also interested in volunteers for this component if we are also collecting mosquitoes near your house or some other place where you spend time outdoors."
+      button: true
+      button_text: "Learn more about DNA collection"
+      button_url: http://www.mosquitoalert.com/en/reconstruyendo-la-interaccion-humano-mosquito-en-el-jardin-botanico-marimurtra/

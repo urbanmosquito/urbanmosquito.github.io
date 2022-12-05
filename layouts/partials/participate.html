@@ -1,0 +1,76 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.participate.participate.enable}}
+{{ with $data.participate.participate}}
+{{"<!-- participate -->" | safeHTML }}
+<section id="participate" class="bg-one section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				{{"<!-- section title -->" | safeHTML }}
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+							{{ with .title }} {{ index (split . " ") 1 | safeHTML }} {{ end }} </span></h2>
+							<p>{{ .content_detail | markdownify }}</p>
+							<a href="{{ .main_download_button_url | absURL }}" class="btn btn-transparent page-scroll">{{ .main_download_button }}</a>
+
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			{{"<!-- /section title -->" | safeHTML }}
+
+			{{ range .service_item}}
+			{{"<!-- Single Service Item -->" | safeHTML }}
+			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						{{ with .url }}<a href="{{ . }}">{{ end }}<i class="{{ .icon }}"></i>{{ with .url }}</a>{{ end }}
+					</div>
+					<h3>{{ .name | markdownify }}</h3>
+					<p>{{ .content | markdownify }}</p>
+				</div>
+			</article>
+			{{"<!-- End Single Service Item -->" | safeHTML }}
+			{{ end }}
+		</div>
+
+	</div>
+
+<br>
+<br>
+
+ {{ range .service_item_detail}}
+ {{"<!-- Single Service Item -->" | safeHTML }}
+<section class="section section-bg about-2 padding-0" id="{{ .id }}">
+	<div class="container-fluid">
+		<div class="row">
+
+							<div class="col-lg-6 padding-0" style="background-image: url('{{ .image_webp | absURL }}'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+				<!-- this image is for trigger this section fallback background image -->
+				<img class="lozad" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .image | absURL }})'" data-src="{{ .image_webp | absURL }}" />
+			</div>
+
+			<div class="col-lg-6">
+				<div class="content-block">
+					<h2>{{ .name  | markdownify }}</h2>
+					<p>{{ .content | markdownify }}</p>
+					 {{ if .button }}
+          <a href="{{ .button_url }}" class="btn btn-transparent page-scroll">{{ .button_text }}</a>
+          {{ end }}
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+<br>
+
+ {{"<!-- End Single Service Item -->" | safeHTML }}
+ {{ end }}
+
+
+
+</section>
+{{"<!-- /participate -->" | safeHTML }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,12 @@
+############################### Banner ################################
+banner:
+  enable : true
+  bg_image_webp : "images/backgrounds/hero-area.webp"
+  bg_image : "images/backgrounds/hero-area.jpg"
+  icon : "" # themify icon pack : https://themify.me/themify-icons
+  title : "Urban Spaces and Mosquitoes on a Changing Planet"
+  content : "23-25 March 2023 | Barcelona"
+  button:
+    enable : false
+    label : "Explore Us"
+    link : "#services"

@@ -1,0 +1,72 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.overview.overview.enable }}
+{{ with $data.overview.overview }}
+{{"<!-- overview -->" | safeHTML }}
+<section style="background-color: white; color: black;" id="overview" class="parallax-section section section-bg overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h2 style="color: black;">{{ .subtitle1 | markdownify }}</h2>
+				<p> {{ .content1 | markdownify }}</p>
+				{{ with .image }}
+				<img class="img-fluid lozad" data-src="{{ . | absURL }}" alt="image">
+				{{ end }}
+            </div>
+
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="images/embornal.png" />
+                </div>
+    
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+        <hr>
+        <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-fluid" src="images/mosquito_upf.png" />
+            </div>    
+
+            <div class="col-lg-8">
+                <h4 style="color: black;">{{ .subtitle2 | markdownify }}</h4>
+                <p> {{ .content2 | markdownify }}</p>
+                {{ with .image }}
+                <img class="img-fluid lozad" data-src="{{ . | absURL }}" alt="image">
+                {{ end }}
+            </div>
+
+    </div>	
+
+    <div class="row">
+        <div class="col-lg-12">
+    <hr>
+    <br>
+        </div>
+    </div>
+
+        <div class="row">
+                <div class="col-lg-8">
+                    <h3 style="color: black;">{{ .subtitle3 | markdownify }}</h3>
+                    <p> {{ .content3 | markdownify }}</p>
+                    {{ with .image }}
+                    <img class="img-fluid lozad" data-src="{{ . | absURL }}" alt="image">
+                    {{ end }}
+                </div>
+
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="images/ovitrap.png" />
+                </div>    
+        </div>	
+    
+    
+    </div>
+
+</section>
+{{"<!-- /skill -->" | safeHTML }}
+{{ end }}
+{{ end }}
