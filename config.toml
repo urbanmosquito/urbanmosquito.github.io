@@ -94,7 +94,8 @@ google_analytics_id = "" # Your ID
 # post share
 post_share = true
 funder_1_logo = "images/upf_marca_blanca.png"
-funder_2_logo = "images/erc_logo.jpeg"
+funder_2_logo = "images/planetary_wellbeing_logo.jpg"
+funder_3_logo = "images/erc_logo.jpeg"
 
 # preloader
 [params.preloader]
